@@ -61,14 +61,7 @@ def sitepopularity(host):
 
     else:
         return [nf, nf]
-'''
-def sitepopularity(host):
-    rank_host= tfe.feaEx(host,'REACH','RANK')
-    print("********rank host:************",rank_host)
-    rank_country= tfe.feaEx(host,'COUNTRY','RANK')
-    print("********rank country:*********",rank_country)
-    return [rank_host, rank_country]
-'''
+
 def Security_sensitive(tokens_words):
     sec_sen_words = ['confirm', 'account', 'banking', 'secure', 'ebayisapi', 'webscr', 'login', 'signin']
     cnt = 0
@@ -107,42 +100,6 @@ def getASN(host):
         return asn
     except:
         return nf
-
-
-'''def web_content_features(url):
-    wfeatures={}
-    total_cnt=0
-    try:        
-        source_code = str(opener.open(url))
-        #print source_code[:500]
-        wfeatures['src_html_cnt']=source_code.count('<html')
-        wfeatures['src_hlink_cnt']=source_code.count('<a href=')
-        wfeatures['src_iframe_cnt']=source_code.count('<iframe')
-        #suspicioussrc_ javascript functions count
-        wfeatures['src_eval_cnt']=source_code.count('eval(')
-        wfeatures['src_escape_cnt']=source_code.count('escape(')
-        wfeatures['src_link_cnt']=source_code.count('link(')
-        wfeatures['src_underescape_cnt']=source_code.count('underescape(')
-        wfeatures['src_exec_cnt']=source_code.count('exec(')
-        wfeatures['src_search_cnt']=source_code.count('search(')
-        for key in wfeatures:
-            if(key!='src_html_cnt' and key!='src_hlink_cnt' and key!='src_iframe_cnt'):
-                total_cnt+=wfeatures[key]
-        wfeatures['src_total_jfun_cnt']=total_cnt
-    except Exception, e:
-        print "Error"+str(e)+" in downloading page "+url 
-        default_val=nf
-        wfeatures['src_html_cnt']=default_val
-        wfeatures['src_hlink_cnt']=default_val
-        wfeatures['src_iframe_cnt']=default_val
-        wfeatures['src_eval_cnt']=default_val
-        wfeatures['src_escape_cnt']=default_val
-        wfeatures['src_link_cnt']=default_val
-        wfeatures['src_underescape_cnt']=default_val
-        wfeatures['src_exec_cnt']=default_val
-        wfeatures['src_search_cnt']=default_val
-        wfeatures['src_total_jfun_cnt']=default_val    
-    return wfeatures'''
 
 
 def safebrowsing(url):
@@ -228,10 +185,7 @@ def feature_extract(url_input):
     Feature['exe_in_url'] = exe_in_url(url_input)
     Feature['ASNno'] = getASN(host)
     Feature['safebrowsing'] = safebrowsing(url_input)
-    """wfeatures=web_content_features(url_input)
-    for key in wfeatures:
-        Feature[key]=wfeatures[key]
-    """
+   
     # debug
     # for key in Feature:
     #     print key +':'+str(Feature[key])
