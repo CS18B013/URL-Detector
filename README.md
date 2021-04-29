@@ -24,5 +24,5 @@ determines if it is a legitimate website or not.
 ```
 
 ### Contributors
-CS18B009 Deepanvi Penmetcha
-CS18B013 G Nikhitha Vedi
+1. CS18B009 Deepanvi Penmetcha
+2. CS18B013 G Nikhitha Vedi
