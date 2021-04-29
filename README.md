@@ -21,6 +21,8 @@ Step-3: Launch the tool using the command "py gui.py"
 Step-4: A GUI appears if run without errors, where an input URL can be given, which the tool analyzes and 
 determines if it is a legitimate website or not.
 
+```
+
 ### Contributors
 CS18B009 Deepanvi Penmetcha
 CS18B013 G Nikhitha Vedi
