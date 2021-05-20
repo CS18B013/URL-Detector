@@ -9,7 +9,7 @@ root = Tk()
 root.title("Malicious Url Detector")
 img = PhotoImage(width=500,height=300)
 root.attributes('-alpha',0.92)
-root.iconbitmap('malware.ico')
+
 root.configure(background='lavender')
 root.geometry("750x120")
 frame = Frame(root, bg ="lavender")
